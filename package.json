@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node --loader ts-node/esm --experimental-specifier-resolution=node dist/server/server.js",
+    "start": "node dist/server/server.js",
     "dev": "tsx --watch src/server/server.ts",
     "test:pass": "tsx src/tests/pass.spec.ts",
     "test:sendmail": "tsx src/tests/send-mail.spec.ts"
