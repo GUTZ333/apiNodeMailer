@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server/server.ts",
-    "dev": "tsx --watch src/server/server.ts",
+    "dev": "tsx --watch src/server/server.js",
     "test:pass": "tsx src/tests/pass.spec.ts",
     "test:sendmail": "tsx src/tests/send-mail.spec.ts"
   },
