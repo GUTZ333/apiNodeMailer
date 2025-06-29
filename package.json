@@ -1,0 +1,40 @@
+{
+  "name": "e-mails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server/server.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/server/server.ts",
+    "dev": "tsx --watch src/server/server.ts",
+    "test:pass": "tsx src/tests/pass.spec.ts",
+    "test:sendmail": "tsx src/tests/send-mail.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/multer": "^1.4.13",
+    "@types/node": "^24.0.3",
+    "@types/node-schedule": "^2.1.7",
+    "@types/nodemailer": "^6.4.17",
+    "@types/nodemailer-express-handlebars": "^4.0.5",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/date-fns": "^2.6.3",
+    "agenda": "^5.0.0",
+    "bullmq": "^5.56.0",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^7.0.3",
+    "nodemailer-express-handlebars": "^7.0.0",
+    "zod": "^3.25.67"
+  }
+}

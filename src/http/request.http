@@ -1,0 +1,37 @@
+POST http://localhost:3000/api/mail/send-attachments
+Content-Type: application/json
+
+{
+  "to": "gutz333.lpsking32.jotavve18@hotmail.com",
+  "subject": "Enviando Anexos com NodeMailer",
+  "html": "<h1><strong>Olhe o PDF abaixo.</strong></h1>",
+  "text": "este e-mail serve para testes de envios de anexos nos envios de e-mails.",
+  "attachments": [
+    {
+      "filename": "ad-suporte.pdf",
+      "path": "./src/public/ad-suporte.pdf"
+    }
+  ]
+}
+  
+###
+POST http://localhost:3000/api/mail/send-template
+Content-Type: application/json
+
+{
+  "to": "gutz333.lpsking32.jotavve18@hotmail.com",
+  "subject": "Enviando template HTML",
+  "text": "este e-mail serve para testar envios de e-mails com template HTML",
+  "template": "index"
+}
+
+###
+POST http://localhost:3000/api/mail/schedule
+Content-Type: application/json
+
+{
+  "to": "gutz333.lpsking32.jotavve18@hotmail.com",
+  "subject": "Agendamento de e-mail",
+  "date": "2025-06-28",
+  "time": "22:00"
+}
