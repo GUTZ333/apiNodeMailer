@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server/server.js",
+    "start": "node --loader ts-node/esm --experimental-specifier-resolution=node dist/server/server.js",
     "dev": "tsx --watch src/server/server.ts",
     "test:pass": "tsx src/tests/pass.spec.ts",
     "test:sendmail": "tsx src/tests/send-mail.spec.ts"
@@ -22,6 +22,7 @@
     "@types/node-schedule": "^2.1.7",
     "@types/nodemailer": "^6.4.17",
     "@types/nodemailer-express-handlebars": "^4.0.5",
+    "tsconfig-paths": "^4.2.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   },

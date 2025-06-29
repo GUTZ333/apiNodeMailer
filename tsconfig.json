@@ -6,11 +6,16 @@
     "module": "esnext",
     "target": "es2020",
     "baseUrl": "./src",
+    "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@/*": ["*"]
+      "@app/*": ["app/*"], // <--- Exemplo de alias: '@app/app' -> 'src/app/app.ts'
+      "@controllers/*": ["controllers/*"],
+      // Adicione outros aliases conforme sua estrutura de pastas
+      "@server/*": ["server/*"]
     },
     "moduleResolution": "node",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", ".env"]
