@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server/server.ts",
-    "dev": "tsx --watch src/server/server.js",
+    "start": "node dist/server/server.js",
+    "dev": "tsx --watch src/server/server.ts",
     "test:pass": "tsx src/tests/pass.spec.ts",
     "test:sendmail": "tsx src/tests/send-mail.spec.ts"
   },
