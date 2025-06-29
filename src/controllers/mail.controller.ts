@@ -17,10 +17,11 @@ export default {
       if (sendingEmail) {
         res.status(201).send({ message: "E-mail enviado com sucesso!!" });
       }
-    } catch (err) {
-      res
-        .status(500)
-        .send({ message: "Ocorreu um erro interno", error: err.message });
+    } catch (err: unknown) {
+      if (err instanceof Error)
+        res
+          .status(500)
+          .send({ message: "Ocorreu um erro interno", error: err.message });
     }
   },
 
@@ -44,8 +45,8 @@ export default {
       if (sendingHtmlTemplate) {
         res.status(201).send({ message: "template enviado com sucesso!!" });
       }
-    } catch (err) {
-      res.status(500).send({ error: err.message });
+    } catch (err: unknown) {
+      if (err instanceof Error) res.status(500).send({ error: err.message });
     }
   },
 
@@ -66,8 +67,8 @@ export default {
       if (sendingAttachments) {
         res.status(201).send({ message: "anexo enviado com sucesso" });
       }
-    } catch (err) {
-      res.status(500).send({ error: err.message });
+    } catch (err: unknown) {
+      if (err instanceof Error) res.status(500).send({ error: err.message });
     }
   },
 
@@ -109,8 +110,8 @@ export default {
           message: `email agendado as ${dateTimeFormated} com sucesso!!`,
         });
       }
-    } catch (err) {
-      res.status(500).send({ error: err.message });
+    } catch (err: unknown) {
+      if (err instanceof Error) res.status(500).send({ error: err.message });
     }
   },
 };
